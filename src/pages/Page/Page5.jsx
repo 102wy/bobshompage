@@ -33,7 +33,117 @@ const Page5 = () => {
   return (
     <Wrap>
       <p className="title">입교상담 게시판</p>
-      <table>
+
+      <div class="container max-w-3xl mx-auto sm:px-8">
+        <div class="py-4">
+          <div class="px-4 py-4 -mx-4 overflow-x-auto sm:-mx-8 sm:px-8">
+            <div class="inline-block min-w-full overflow-hidden rounded-lg shadow">
+              <table class="min-w-full leading-normal">
+                <thead>
+                  <tr>
+                    <th
+                      scope="col"
+                      class="px-5 py-3 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200"
+                    >
+                      등록자
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-5 py-3 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200"
+                    >
+                      제목
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                      <div class="flex items-center">
+                        <div class="flex-shrink-0">애기사랑</div>
+                        <div class="ml-3">
+                          <p class="text-gray-900 whitespace-no-wrap"></p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                      <FlexBox>
+                        <img
+                          src={`${process.env.PUBLIC_URL}/images/lock.png`}
+                          alt="비밀글"
+                          style={{ width: "20px" }}
+                        />
+                        <p class="text-gray-900 whitespace-no-wrap">
+                          입교 상담 문의 드립니다.
+                        </p>
+                      </FlexBox>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                      <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                          <a href="#" class="relative block"></a>
+                        </div>
+                        <div class="ml-3">
+                          <p class="text-gray-900 whitespace-no-wrap">동산인</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                      <p class="text-gray-900 whitespace-no-wrap">
+                        <FlexBox>
+                          <img
+                            src={`${process.env.PUBLIC_URL}/images/lock.png`}
+                            alt="비밀글"
+                            style={{ width: "20px" }}
+                          />
+                          <p class="text-gray-900 whitespace-no-wrap">
+                            예배는 언제 가능할까요??
+                          </p>
+                        </FlexBox>
+                      </p>
+                    </td>
+                  </tr>
+                  {data?.map((value) => {
+                    return (
+                      <tr>
+                        <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                          <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                              <a href="#" class="relative block"></a>
+                            </div>
+                            <div class="ml-3">
+                              <p class="text-gray-900 whitespace-no-wrap">
+                                {value.user_name}
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                          <p class="text-gray-900 whitespace-no-wrap">
+                            <FlexBox>
+                              <img
+                                src={`${process.env.PUBLIC_URL}/images/lock.png`}
+                                alt="비밀글"
+                                style={{ width: "20px" }}
+                              />
+                              <p class="text-gray-900 whitespace-no-wrap">
+                                {value.title}
+                              </p>
+                            </FlexBox>
+                          </p>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <table>
         <colgroup>
           <col width="30%" />
           <col width="70%" />
@@ -78,9 +188,14 @@ const Page5 = () => {
             );
           })}
         </tbody>
-      </table>
-
-      <RegistButton onClick={() => navigate("/page6")}>글쓰기</RegistButton>
+      </table> */}
+      <button
+        type="button"
+        class="py-2 px-4  dark:bg-gray-800 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+        onClick={() => navigate("/page6")}
+      >
+        글쓰기
+      </button>
     </Wrap>
   );
 };
@@ -121,4 +236,9 @@ const RegistButton = styled.button`
   font-size: 10px;
   font-size: 16px;
   padding: 10px;
+`;
+export const FlexBox = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
 `;

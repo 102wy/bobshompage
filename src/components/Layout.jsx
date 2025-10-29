@@ -10,7 +10,8 @@ const Layout = () => {
   return (
     <Wrap>
       <Contents>
-        {pathname !== "/" && <SearchBar />}
+        <SearchBar />
+        {/* {pathname !== "/" && } */}
         <Outlet />
       </Contents>
     </Wrap>

@@ -6,67 +6,48 @@ import * as utils from "../utils";
 
 const SearchBar = () => {
   const navigate = useNavigate();
-  const [keyword, setKeyword] = useState();
-
-  const onSearch = (e) => {
-    let path = ""; // 초기 경로
-    let level; // level 변수 선언
-    let keywordWithoutSpace = keyword.replace(/\s+/g, ""); // 키워드에서 공백 제거
-
-    if (!keywordWithoutSpace) {
-      navigate("/");
-      return;
-    }
-
-    let isLevelIncluded = false; // Level에 해당하는 단어가 검색어에 포함되어 있는지 여부를 체크하기 위한 변수
-
-    // 검색어에 Level에 있는 단어가 포함되어 있는지 체크
-    for (level in utils.Level) {
-      if (keywordWithoutSpace.includes(utils.Level[level])) {
-        path += `/${keywordWithoutSpace.replace(utils.Level[level], "")}/${
-          utils.Level[level]
-        }`; // 수정된 부분
-        isLevelIncluded = true; // Level에 해당하는 단어가 검색어에 포함되어 있다면 플래그를 설정
-        break;
-      }
-    }
-
-    // Level에 해당하는 단어가 검색어에 포함되어 있지 않다면, 검색어를 경로에 추가
-    if (!isLevelIncluded) {
-      path += `/${keywordWithoutSpace}`;
-    }
-
-    // 검색어가 Level에 있는 단어로 시작하는 경우, 검색어 자체를 경로에 추가
-    if (keywordWithoutSpace.startsWith(utils.Level[level])) {
-      path += `/${keywordWithoutSpace}`;
-    }
-
-    navigate(path);
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      onSearch();
-    }
-  };
 
   return (
-    <Wrap>
-      {/* <div className="button-wrap">
-        <Serach
-          onChange={(e) => setKeyword(e.target.value)}
-          onKeyDown={handleKeyDown}
-        />
-        <Button onClick={onSearch}>검색</Button>
-      </div> */}
-      <div className="home">
-        <img
-          src={`${process.env.PUBLIC_URL}/images/home.png`}
-          alt="홈으로가기"
-          onClick={() => navigate("/")}
-        />
-      </div>
-    </Wrap>
+    <div>
+      <nav class="bg-white dark:bg-gray-800  ">
+        <div class="px-8 mx-auto max-w-7xl">
+          <div class="flex items-center justify-between h-16">
+            <div class=" flex items-center">
+              <a class="flex-shrink-0" href="/">
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/home.png`}
+                  alt="메인으로가기"
+                  style={{ width: "35px" }}
+                />
+              </a>
+              <div class="hidden md:block">
+                <div class="flex items-baseline ml-10 space-x-4"></div>
+              </div>
+            </div>
+            <div class="block">
+              <div class="flex items-center ml-4 md:ml-6"></div>
+            </div>
+            {/* <div class="flex -mr-2 md:hidden">
+              <button class="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="w-8 h-8"
+                  viewBox="0 0 1792 1792"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z"></path>
+                </svg>
+              </button>
+            </div> */}
+          </div>
+        </div>
+        {/* <div class="md:hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3"></div>
+        </div> */}
+      </nav>
+    </div>
   );
 };
 

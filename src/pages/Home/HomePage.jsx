@@ -9,10 +9,26 @@ const HomePage = () => {
 
   return (
     <Wrap>
-      <img src={`${process.env.PUBLIC_URL}/images/main.png`} alt="애기동산" />
+      <img
+        src={`${process.env.PUBLIC_URL}/images/main.png`}
+        alt="애기동산"
+        className="main_img"
+      />
       <ButtonWrap>
-        <button onClick={() => navigate("/page5")}>입교상담</button>
-        <button onClick={() => navigate("/page1")}>신도동산</button>
+        <button
+          type="button"
+          class="py-2 px-4  dark:bg-gray-800 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+          onClick={() => navigate("/page5")}
+        >
+          입교상담
+        </button>
+        <button
+          type="button"
+          class="py-2 px-4  dark:bg-gray-800 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+          onClick={() => navigate("/page1")}
+        >
+          신도동산
+        </button>
       </ButtonWrap>
     </Wrap>
   );
@@ -21,15 +37,18 @@ const HomePage = () => {
 export default HomePage;
 
 const Wrap = styled.div`
-  padding: 100px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
   align-items: center;
   h1 {
     text-align: center;
     font-size: 34px;
     padding-top: 50px;
+  }
+  .main_img {
+    max-width: 250px;
   }
 `;
 
