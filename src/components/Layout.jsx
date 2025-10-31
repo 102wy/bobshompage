@@ -25,6 +25,7 @@ const Wrap = styled.div`
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  background-color: #fff !important;
 `;
 
 const Contents = styled.div`

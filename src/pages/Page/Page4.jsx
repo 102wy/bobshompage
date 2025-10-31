@@ -16,7 +16,7 @@ const Page4 = () => {
       <br />
 
       <p>
-        * 금일 선교행사로 인해 명단 발행업무가 불가능합니다.
+        * 금일 김광석길 선교행사로 인해 명단 발행업무가 불가능합니다.
         <br />
         그러나 행사진행요원 중에 명단을 가지고 있는 관리자가 있으니 직접 수령은
         가능합니다.
@@ -24,7 +24,26 @@ const Page4 = () => {
         정확한 암구어를 제시하시면 명단을 받을 수 있습니다.
       </p>
       <br />
-      <p>바람곳 - 먁켱이를 비차얘 비매여</p>
+      {/* <p className="keyword_box">바람곳 - 먁켱이를 비차얘 비매여</p> */}
+
+      <div
+        class="m-auto overflow-hidden bg-gray-800 rounded-lg shadow-lg cursor-pointer h-90 w-60 md:w-80"
+        style={{ width: "30rem", marginTop: "10vh" }}
+      >
+        <a class="block w-full h-full ">
+          <div class="w-full p-4 bg-gray-800 ">
+            <p class="font-medium text-indigo-500 text-md font_bold">
+              금일의 암구어
+            </p>
+            <p class="mb-2 text-xl font-medium text-gray-800 text-white text_center">
+              바람곳 - 먁켱이를 비차얘 비매여
+            </p>
+            <p class="font-light text-gray-400 text-gray-300 text-md font_size_12">
+              암구어는 정확한 음정이 중요합니다.
+            </p>
+          </div>
+        </a>
+      </div>
     </Wrap>
   );
 };
@@ -41,6 +60,17 @@ const Wrap = styled.div`
     font-size: 18px;
     margin-top: 10px;
     margin-bottom: 5px;
+  }
+
+  .keyword_box {
+    text-align: center;
+    margin-top: 10vh;
+  }
+  .font_size_12 {
+    font-size: 12px;
+  }
+  .font_bold {
+    font-weight: bold;
   }
 `;
 

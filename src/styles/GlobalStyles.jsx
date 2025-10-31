@@ -10,4 +10,9 @@ export const GlobalStyle = createGlobalStyle`
      body {
           /* background-color: #eee; */
      }
+
+
+     .text_center {
+          text-align: center;
+     }
 `;

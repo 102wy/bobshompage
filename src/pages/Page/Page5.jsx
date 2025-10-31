@@ -58,9 +58,9 @@ const Page5 = () => {
                 <tbody>
                   <tr>
                     <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
-                      <div class="flex items-center">
+                      <div class="">
                         <div class="flex-shrink-0">애기사랑</div>
-                        <div class="ml-3">
+                        <div class="">
                           <p class="text-gray-900 whitespace-no-wrap"></p>
                         </div>
                       </div>
@@ -78,13 +78,14 @@ const Page5 = () => {
                       </FlexBox>
                     </td>
                   </tr>
+
                   <tr>
                     <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
                       <div class="flex items-center">
                         <div class="flex-shrink-0">
-                          <a href="#" class="relative block"></a>
+                          <a class="relative block"></a>
                         </div>
-                        <div class="ml-3">
+                        <div class="">
                           <p class="text-gray-900 whitespace-no-wrap">동산인</p>
                         </div>
                       </div>
@@ -104,15 +105,41 @@ const Page5 = () => {
                       </p>
                     </td>
                   </tr>
+                  <tr>
+                    <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                      <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                          <a class="relative block"></a>
+                        </div>
+                        <div class="">
+                          <p class="text-gray-900 whitespace-no-wrap">도후니</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                      <p class="text-gray-900 whitespace-no-wrap">
+                        <FlexBox>
+                          <img
+                            src={`${process.env.PUBLIC_URL}/images/lock.png`}
+                            alt="비밀글"
+                            style={{ width: "20px" }}
+                          />
+                          <p class="text-gray-900 whitespace-no-wrap">
+                            가입인사드려요.
+                          </p>
+                        </FlexBox>
+                      </p>
+                    </td>
+                  </tr>
                   {data?.map((value) => {
                     return (
                       <tr>
                         <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
                           <div class="flex items-center">
                             <div class="flex-shrink-0">
-                              <a href="#" class="relative block"></a>
+                              <a class="relative block"></a>
                             </div>
-                            <div class="ml-3">
+                            <div class="">
                               <p class="text-gray-900 whitespace-no-wrap">
                                 {value.user_name}
                               </p>
@@ -191,7 +218,7 @@ const Page5 = () => {
       </table> */}
       <button
         type="button"
-        class="py-2 px-4  dark:bg-gray-800 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+        class="py-2 px-4  bg-gray-800 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
         onClick={() => navigate("/page6")}
       >
         글쓰기

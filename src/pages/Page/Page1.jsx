@@ -10,10 +10,12 @@ const Page1 = () => {
         11월 15일은 애기동산 주민들이 하나되어 선교하는 날입니다. 모두 모여
         애기야님의 말씀을 전하고 선교하여 많은 이들을 구원의 길로 이끕시다.
       </p>
-      <p>*행사진행으로 인해 홈페이지 이용이 일부 제한됩니다.</p>
+      <p className="text_center" style={{ marginTop: "20vh" }}>
+        *행사진행으로 인해 홈페이지 이용이 일부 제한됩니다.
+      </p>
       <button
         type="button"
-        class="py-2 px-4  dark:bg-gray-800 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg button"
+        class="py-2 px-4  bg-gray-800 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg button"
         onClick={() => navigate("/page2")}
       >
         애기동산 간부전용
