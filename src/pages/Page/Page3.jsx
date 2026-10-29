@@ -10,7 +10,7 @@ const Page3 = () => {
   return (
     <Wrap>
       <p className="title">
-        11월 15일은 애기동산 주민들이 하나되어 선교하는 날입니다. 모두 모여
+        11월 7일은 애기동산 주민들이 하나되어 선교하는 날입니다. 모두 모여
         애기야님의 말씀을 전하고 선교하여 많은 이들을 구원의 길로 이끕시다.
       </p>
       <p className="text_center" style={{ marginTop: "20vh" }}>
